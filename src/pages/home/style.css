@@ -15,12 +15,12 @@ section {
     color: var(--primary-color);
 }
 
-.btn-portfolio {
+.btn-projects {
     background: var(--primary-color);
     border-radius: 0;
 }
 
-.btn-portfolio a {
+.btn-projects a {
     color: #000;
     text-decoration: none;
 }
@@ -229,6 +229,6 @@ section {
     color: var(--text-color)
 }
 
-.intro_sec .h_bg-image {
+/* .intro_sec .h_bg-image {
     filter: saturate(0.5);
-}
+} */

@@ -4,11 +4,12 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
+import SmoothScrollLink from "../../components/SmoothScrollLink";
 
 export const Home = () => {
   return (
     <HelmetProvider>
-      <section id="home" className="home">
+      <section className="home">
         <Helmet>
           <meta charSet="utf-8" />
           <title> {meta.title}</title>
@@ -37,24 +38,34 @@ export const Home = () => {
                     }}
                   />
                 </h1>
-                <p className="mb-1x">{introdata.description}</p>
                 <div className="intro_btn-action pb-5">
-                  <Link to="/portfolio" className="text_2">
-                    <div id="button_p" className="ac_btn btn ">
-                      My Portfolio
+                  <Link to="/resume">
+                    <div id="button_h" className="ac_btn btn">
+                      View CV
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>
                     </div>
                   </Link>
-                  <Link to="/contact">
+                  <SmoothScrollLink to="projects" className="text_2">
+                    <div id="button_p" className="ac_btn btn">
+                      My Projects
+                      <div className="ring one"></div>
+                      <div className="ring two"></div>
+                      <div className="ring three"></div>
+                    </div>
+                  </SmoothScrollLink>
+                </div>
+                <p className="mb-1x">{introdata.description}</p>
+                <div className="intro_btn-action pb-5">
+                  <SmoothScrollLink to="contact">
                     <div id="button_h" className="ac_btn btn">
                       Contact Me
                       <div className="ring one"></div>
                       <div className="ring two"></div>
                       <div className="ring three"></div>
                     </div>
-                  </Link>
+                  </SmoothScrollLink>
                 </div>
               </div>
             </div>

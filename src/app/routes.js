@@ -2,11 +2,13 @@ import React from "react";
 import { Route, Routes} from "react-router-dom";
 import withRouter from "../hooks/withRouter"
 import { Home } from "../pages/home";
-import { Portfolio } from "../pages/portfolio";
+import { Projects } from "../pages/projects";
 import { ContactUs } from "../pages/contact";
+import {Resume} from "../components/resume";
 import { About } from "../pages/about";
 import { Socialicons } from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import AllSections from "./AllSections";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -20,11 +22,12 @@ const AnimatedRoutes = withRouter(({ location }) => (
       unmountOnExit
     >
       <Routes location={location}>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="*" element={<Home />} />
+        {/* <Route exact path="/" element={<AllSections />} /> */}
+        {/* <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<ContactUs />} /> */}
+        <Route path="/resume" element={<Resume />} />
+        <Route path="*" element={<AllSections />} />
       </Routes>
     </CSSTransition>
   </TransitionGroup>
@@ -34,7 +37,7 @@ function AppRoutes() {
   return (
     <div className="s_c">
       <AnimatedRoutes />
-      <Socialicons />
+      {/* <Socialicons /> */}
     </div>
   );
 }
