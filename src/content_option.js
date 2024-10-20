@@ -202,9 +202,9 @@ const contactConfig = {
   ),
   // creat an emailjs.com account
   // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-  YOUR_SERVICE_ID: "service_id",
-  YOUR_TEMPLATE_ID: "template_id",
-  YOUR_USER_ID: "user_id",
+  YOUR_SERVICE_ID: "service_6qjgwei",
+  YOUR_TEMPLATE_ID: "template_j4tvtgf",
+  YOUR_USER_ID: "3iuOVra7ealZJbWhY", //User ID is replaced by Public key which can be find in settings
 };
 
 const socialprofils = {
